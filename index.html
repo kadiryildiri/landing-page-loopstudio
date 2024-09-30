@@ -1,0 +1,360 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "dark-gray": "hsl(0, 0%, 55%)",
+                            "very-dark-gray": "hsl(0, 0%, 41%)",
+                        },
+                        fontFamily: {
+                            josefin: ["Josefin Sans", "sans-serif"],
+                            alata: ["Alata", "sans-serif"],
+                        },
+                    },
+                },
+            }
+        </script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Document</title>
+    </head>
+    <body class="">
+        <header
+            class="bg-[url('images/mobile/image-hero.jpg')] bg-cover bg-center min-h-screen w-full px-6 py-10 flex flex-col md:px-40 md:pt-20 md:bg-[url('images/desktop/image-hero.jpg')]"
+            id="header"
+        >
+            <div class="flex justify-between">
+                <img class="w-32" src="images/logo.svg" alt="" />
+                <button class="md:hidden" id="openBtn"><img src="images/icon-hamburger.svg" alt="" /></button>
+                <div class="hidden md:w-full md:flex md:justify-end">
+                    <ul class="justify-end hidden gap-12 text-white md:flex font-alata">
+                        <li>
+                            <a class="hover:pb-1 hover:border-b-2" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="hover:pb-1 hover:border-b-2" href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a class="hover:pb-1 hover:border-b-2" href="#">Events</a>
+                        </li>
+                        <li>
+                            <a class="hover:pb-1 hover:border-b-2" href="#">Products</a>
+                        </li>
+                        <li>
+                            <a class="hover:pb-1 hover:border-b-2" href="#">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex items-center justify-center flex-grow md:justify-start">
+                <div class="p-4 border-2 border-white md:w-[600px]">
+                    <h1 class="text-4xl text-left text-white font-josefin md:text-6xl md:p-6">
+                        IMMERSIVE <br class="hidden md:flex" />
+                        EXPERIENCES <br class="hidden md:flex" />
+                        THAT <br class="flex md:hidden" />
+                        DELIVER
+                    </h1>
+                </div>
+            </div>
+        </header>
+
+        <aside class="hidden w-full h-screen px-6 py-10 bg-black md:hidden" id="aside">
+            <div class="flex justify-between">
+                <img class="w-32" src="images/logo.svg" alt="" />
+                <button id="closeBtn"><img src="images/icon-close.svg" alt="" /></button>
+            </div>
+            <div class="flex flex-col justify-center h-full">
+                <ul class="flex flex-col gap-4 text-2xl text-white font-josefin">
+                    <li>
+                        <a href="">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="">CAREERS</a>
+                    </li>
+                    <li>
+                        <a href="">EVENTS</a>
+                    </li>
+                    <li>
+                        <a href="">PRODUCTS</a>
+                    </li>
+                    <li>
+                        <a href="">SUPPORT</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="px-6 py-20 bg-white md:px-40" id="main">
+            <section class="md:flex md:relative">
+                <img class="md:hidden" src="images/mobile/image-interactive.jpg" alt="" />
+                <img class="hidden md:flex" src="images/desktop/image-interactive.jpg" alt="" />
+                <div
+                    class="flex flex-col items-center gap-2 mt-10 text-center md:absolute md:w-1/2 md:text-left md:px-20 md:pt-20 md:bg-white md:bottom-0 md:left-[570px]"
+                >
+                    <h2 class="text-3xl font-josefin md:text-5xl">THE LEADER IN INTERACTIVE VR</h2>
+                    <p class="p-2 text-sm leading-relaxed text-dark-gray font-alata">
+                        Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of
+                        the best companies around the globe. Our award-winning creations have transformed bussinesses
+                        through digital experiences that bind to their brand.
+                    </p>
+                </div>
+            </section>
+            <section class="flex flex-col items-center md:mt-28">
+                <div class="md:flex md:justify-between md:w-full md:items-center">
+                    <h2 class="mt-16 mb-6 text-3xl font-josefin md:text-4xl">OUR CREATINS</h2>
+                    <button
+                        class="hidden md:inline-block px-10 py-2 tracking-[.35em] text-black bg-white border-2 border-black font-alata hover:bg-black hover:text-white"
+                    >
+                        SEE ALL
+                    </button>
+                </div>
+
+                <div class="flex-wrap justify-between hidden w-full md:flex md:mt-8">
+                    <div class="flex justify-between w-full mb-8">
+                        <li class="relative list-none cursor-pointer group">
+                            <img src="images/desktop/image-deep-earth.jpg" alt="" />
+                            <div
+                                class="absolute inset-0 transition-opacity duration-300 bg-white opacity-0 group-hover:opacity-80"
+                            ></div>
+                            <span class="absolute text-2xl text-white left-10 bottom-10 font-josefin"
+                                >DEEP <br />
+                                EARTH</span
+                            >
+                        </li>
+                        <li class="relative list-none cursor-pointer group">
+                            <img src="images/desktop/image-night-arcade.jpg" alt="" />
+                            <div
+                                class="absolute inset-0 transition-opacity duration-300 bg-white opacity-0 group-hover:opacity-80"
+                            ></div>
+
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                                <span class="absolute text-2xl text-white left-10 bottom-10 font-josefin"
+                                    >NIGHT <br />
+                                    ARCADE</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative list-none cursor-pointer group">
+                            <img src="images/desktop/image-soccer-team.jpg" alt="" />
+                            <div
+                                class="absolute inset-0 transition-opacity duration-300 bg-white opacity-0 group-hover:opacity-80"
+                            ></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
+                                <span class="absolute text-2xl text-white left-10 bottom-10 font-josefin"
+                                    >SOCCER <br />
+                                    TEAM VR</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative list-none cursor-pointer group">
+                            <img src="images/desktop/image-grid.jpg" alt="" />
+                            <div
+                                class="absolute inset-0 transition-opacity duration-300 bg-white opacity-0 group-hover:opacity-80"
+                            ></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
+                                <span class="absolute text-2xl text-white left-10 bottom-10 font-josefin"
+                                    >THE <br />
+                                    GRID</span
+                                >
+                            </div>
+                        </li>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <li class="relative list-none cursor-pointer group">
+                            <img src="images/desktop/image-from-above.jpg" alt="" />
+                            <div
+                                class="absolute inset-0 transition-opacity duration-300 bg-white opacity-0 group-hover:opacity-80"
+                            ></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
+                                <span class="absolute text-2xl text-white left-10 bottom-10 font-josefin"
+                                    >FROM UP <br />
+                                    ABOVE VR</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative list-none cursor-pointer group">
+                            <img src="images/desktop/image-pocket-borealis.jpg" alt="" />
+                            <div
+                                class="absolute inset-0 transition-opacity duration-300 bg-white opacity-0 group-hover:opacity-80"
+                            ></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
+                                <span class="absolute text-2xl text-white left-10 bottom-10 font-josefin"
+                                    >POCKET <br />
+                                    BOREALIS</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative list-none cursor-pointer group">
+                            <img src="images/desktop/image-curiosity.jpg" alt="" />
+                            <div
+                                class="absolute inset-0 transition-opacity duration-300 bg-white opacity-0 group-hover:opacity-80"
+                            ></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
+                                <span class="absolute text-2xl text-white left-10 bottom-10 font-josefin"
+                                    >THE <br />
+                                    CURIOSITY</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative list-none cursor-pointer group">
+                            <img src="images/desktop/image-fisheye.jpg" alt="" />
+                            <div
+                                class="absolute inset-0 transition-opacity duration-300 bg-white opacity-0 group-hover:opacity-80"
+                            ></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
+                                <span class="absolute text-2xl text-white left-10 bottom-10 font-josefin"
+                                    >MAKE IT <br />
+                                    FISH EYE</span
+                                >
+                            </div>
+                        </li>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:hidden">
+                    <ul class="flex flex-col gap-5">
+                        <li class="relative">
+                            <img src="images/mobile/image-deep-earth.jpg" alt="deep earth" />
+                            <span class="absolute text-xl text-white drop-shadow-2xl left-4 top-10 font-josefin"
+                                >DEEP <br />
+                                EARTH</span
+                            >
+                        </li>
+                        <li class="relative">
+                            <img src="images/mobile/image-night-arcade.jpg" alt="night arcade" />
+
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
+                                <span class="absolute text-xl text-white left-4 top-10 font-josefin"
+                                    >NIGHT <br />
+                                    ARCADE</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <img src="images/mobile/image-soccer-team.jpg" alt="soccer team" />
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
+                                <span class="absolute text-xl text-white left-4 top-10 font-josefin"
+                                    >SOCCER <br />
+                                    TEAM VR</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <img src="images/mobile/image-grid.jpg" alt="the grid" />
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
+                                <span class="absolute text-xl text-white left-4 top-10 font-josefin"
+                                    >THE<br />
+                                    GRID</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <img src="images/mobile/image-from-above.jpg" alt="from up above vr" />
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
+                                <span class="absolute text-xl text-white left-4 top-10 font-josefin"
+                                    >FROM UP <br />
+                                    ABOVE VR</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <img src="images/mobile/image-pocket-borealis.jpg" alt="pocket borealis" />
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
+                                <span class="absolute text-xl text-white left-4 top-10 font-josefin"
+                                    >POCKET<br />
+                                    BOREALIS</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <img src="images/mobile/image-curiosity.jpg" alt="the curiosity mars rover" />
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
+                                <span class="absolute text-xl text-white left-4 top-10 font-josefin"
+                                    >THE <br />
+                                    CURIOSITY</span
+                                >
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <img src="images/mobile/image-fisheye.jpg" alt="make it fisheye" />
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
+                                <span class="absolute text-xl text-white left-4 top-10 font-josefin"
+                                    >MAKE IT <br />
+                                    FISH EYE</span
+                                >
+                            </div>
+                        </li>
+                    </ul>
+                    <button
+                        class="mt-8 px-12 py-2 tracking-[.35em] text-black bg-white border-2 border-black font-alata"
+                    >
+                        SEE ALL
+                    </button>
+                </div>
+            </section>
+        </main>
+        <footer
+            class="flex flex-col items-center gap-8 py-12 bg-black md:flex md:flex-row md:justify-between md:w-full md:px-40"
+            id="footer"
+        >
+            <div>
+                <img src="images/logo.svg" alt="" />
+                <ul
+                    class="flex flex-col gap-4 mt-8 text-sm text-center text-white font-alata md:flex md:flex-row md:mt-8 md:gap-8"
+                >
+                    <li>
+                        <a class="md:hover:pb-1 md:hover:border-b-2" href="#">About</a>
+                    </li>
+                    <li>
+                        <a class="md:hover:pb-1 md:hover:border-b-2" href="#">Careers</a>
+                    </li>
+                    <li>
+                        <a class="md:hover:pb-1 md:hover:border-b-2" href="#">Events</a>
+                    </li>
+                    <li>
+                        <a class="md:hover:pb-1 md:hover:border-b-2" href="#">Products</a>
+                    </li>
+                    <li>
+                        <a class="md:hover:pb-1 md:hover:border-b-2" href="#">Support</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center md:flex md:flex-col md:items-end">
+                <ul class="flex items-center gap-4 mt-4">
+                    <li>
+                        <a href=""><img src="images/icon-facebook.svg" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/icon-twitter.svg" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/icon-pinterest.svg" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/icon-instagram.svg" alt="" /></a>
+                    </li>
+                </ul>
+                <p class="mt-4 text-sm text-dark-gray font-alata md:mt-8">© 2021 Loopstudios. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>
